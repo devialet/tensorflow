@@ -38,7 +38,7 @@ fi
 ################################################################################
 # Library name and headers
 LIBNAME=libtensorflowlite_c.so
-INCNAME=c_api.h
+INCNAME=*.h
 ################################################################################
 # Where to build
 BUILDDIR=$(realpath "$1")
@@ -51,7 +51,7 @@ FULL_PATH_TO_SCRIPT="$(realpath "$0")"
 SCRIPT_DIRECTORY="$(dirname "$FULL_PATH_TO_SCRIPT")"
 TENSORFLOW_SRC=${SCRIPT_DIRECTORY}/../../../tensorflow/lite/c/
 BINARY_DIR=${SCRIPT_DIRECTORY}/../../binaries/${TARGET}/
-INCLUDE_DIR=${SCRIPT_DIRECTORY}/../../binaries/include/
+INCLUDE_DIR=${SCRIPT_DIRECTORY}/../../binaries/include/tensorflow/lite/c
 ################################################################################
 # Toolchain if not native
 if [ "$TARGET" == "aarch64" ] || [ "$TARGET" == "armv7l" ]; then
